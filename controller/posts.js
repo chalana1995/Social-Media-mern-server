@@ -11,8 +11,8 @@ export const getPosts = async (req, res) => {
 }
 
 export const createPost = async (req, res) => {
-    let post = rea.body;
-
+    let post = req.body;
+    console.log("===post", post);
     const newPost = new PostMessage(post)
 
     try {
