@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import postRouter from './routes/posts.js'
+import userRouter from './routes/users.js'
 import dotenv from 'dotenv'
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(cors())
 
 
 app.use('/posts',postRouter)
+app.use('/users', userRouter)
 
 const PORT = process.env.PORT || 5000
 
