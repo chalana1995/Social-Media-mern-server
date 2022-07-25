@@ -13,8 +13,7 @@ export const getPosts = async (req, res) => {
 
 export const createPost = async (req, res) => {
     let post = req.body;
-    console.log("===post", post);
-    console.log("userId create",req);
+    console.log("=== userid",req.userId);
     const newPost = new PostMessage({...post, creator: req.userId, createdAt: new Date().toISOString()})
 
     try {
